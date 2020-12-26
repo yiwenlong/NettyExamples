@@ -43,7 +43,7 @@ public class Broadcaster {
                 raf.seek(pointer);
                 String line;
                 while ((line = raf.readLine()) != null) {
-                    ch.writeAndFlush(new LogEvent(null, -1, file.getAbsolutePath(), line));
+                    ch.writeAndFlush(new LogEvent(file.getAbsolutePath(), line));
                 }
                 pointer = raf.getFilePointer();
                 raf.close();

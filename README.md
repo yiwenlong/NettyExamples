@@ -11,7 +11,7 @@ mvn clean package -Dmaven.javadoc.skip=true
 You should run the following command in a terminal:
 
 ```shell
-java -jar ./LogEvent/Monitor/target/LogEvent.Monitor-1.0-SNAPSHOT-jar-with-dependencies.jar 
+java -jar ./LogEvent/Monitor/target/LogEvent.Monitor-1.0-SNAPSHOT-jar-with-dependencies.jar 7788
 ```
 
 Run the following command in another terminal:

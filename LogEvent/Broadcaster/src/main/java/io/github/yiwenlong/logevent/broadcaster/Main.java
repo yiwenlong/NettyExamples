@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         if (args.length != 2) {
-            throw new IllegalArgumentException("Usage: Broadcaster <port> <logfile>");
+            throw new IllegalArgumentException("Usage: Broadcaster <ip:port> <logfile>");
         }
-
+        final String[] ipPort = args[0].split(":");
         Broadcaster broadcaster = new Broadcaster(
-                new InetSocketAddress("255.255.255.255", Integer.parseInt(args[0])),
+                new InetSocketAddress(ipPort[0], Integer.parseInt(ipPort[1])),
                 new File(args[1])
         );
 

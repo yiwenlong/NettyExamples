@@ -18,6 +18,6 @@ Run the following command in another terminal:
 
 ```shell
 # You should replace <logfile path> with you real log file.
-java -jar ./LogEvent/Monitor/target/LogEvent.Monitor-1.0-SNAPSHOT-jar-with-dependencies.jar 7788 <logfile path>
+java -jar ./LogEvent/Monitor/target/LogEvent.Monitor-1.0-SNAPSHOT-jar-with-dependencies.jar 255.255.255.255:7788 <logfile path>
 ```
 

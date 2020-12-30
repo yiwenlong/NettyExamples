@@ -11,7 +11,8 @@
     <modules>
         <module>LogEvent</module>
 		<module>PlainServer</module>
-	</modules>
+        <module>Echo</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

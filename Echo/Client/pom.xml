@@ -3,22 +3,28 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<artifactId>NettyExamples</artifactId>
+		<artifactId>Echo</artifactId>
 		<groupId>io.github.yiwenlong</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>Echo</artifactId>
-	<packaging>pom</packaging>
-	<modules>
-		<module>Server</module>
-		<module>Client</module>
-	</modules>
+	<artifactId>Echo.Client</artifactId>
 
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions><execution><configuration><archive><manifest><mainClass>
+					io.github.yiwenlong.echo.client.EchoClient
+				</mainClass></manifest></archive></configuration></execution></executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

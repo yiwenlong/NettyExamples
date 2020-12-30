@@ -16,4 +16,15 @@
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
 
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions><execution><configuration><archive><manifest><mainClass>
+					io.github.yiwenlong.echo.server.EchoServer
+				</mainClass></manifest></archive></configuration></execution></executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>

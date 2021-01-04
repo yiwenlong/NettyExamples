@@ -12,7 +12,8 @@
         <module>LogEvent</module>
 		<module>PlainServer</module>
         <module>Echo</module>
-    </modules>
+		<module>DNS</module>
+	</modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

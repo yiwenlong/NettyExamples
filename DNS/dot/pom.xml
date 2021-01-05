@@ -3,23 +3,28 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<artifactId>NettyExamples</artifactId>
+		<artifactId>DNS</artifactId>
 		<groupId>io.github.yiwenlong</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>DNS</artifactId>
-	<packaging>pom</packaging>
-	<modules>
-		<module>tcp</module>
-		<module>udp</module>
-		<module>dot</module>
-	</modules>
+	<artifactId>DNS.dot</artifactId>
 
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions><execution><configuration><archive><manifest><mainClass>
+					io.github.yiwenlong.dns.dot.DotDnsClient
+				</mainClass></manifest></archive></configuration></execution></executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
